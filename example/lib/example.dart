@@ -37,7 +37,7 @@ class ConnectionExample extends StatelessWidget {
                 body: new Row(
                   children: <Widget>[
                     TextButton(
-                      onPressed: () => actions.increment,
+                      onPressed: () => actions.increment(null),
                       child: new Text('Increment'),
                     ),
                     new Text('Count: $count'),
@@ -80,7 +80,7 @@ class CounterWidget extends StoreConnector<Counter, CounterActions, int> {
         body: new Row(
           children: <Widget>[
             new TextButton(
-              onPressed: () => actions.increment,
+              onPressed: () => actions.increment(null),
               child: new Text('Increment'),
             ),
             new Text('Count: $count'),
