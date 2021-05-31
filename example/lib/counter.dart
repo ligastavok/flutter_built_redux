@@ -3,9 +3,8 @@ import 'package:built_value/built_value.dart';
 
 part 'counter.g.dart';
 
-ReducerBuilder<Counter, CounterBuilder> reducerBuilder =
-    new ReducerBuilder<Counter, CounterBuilder>()
-      ..add<dynamic>(CounterActionsNames.increment, (s, a, b) => b.count++);
+ReducerBuilder<Counter, CounterBuilder> reducerBuilder = new ReducerBuilder<Counter, CounterBuilder>()
+  ..add<dynamic>(CounterActionsNames.increment, (s, a, b) => b.count++);
 
 abstract class CounterActions extends ReduxActions {
   factory CounterActions() => _$CounterActions();

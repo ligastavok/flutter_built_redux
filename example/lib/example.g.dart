@@ -10,16 +10,14 @@ class _$Counter extends Counter {
   @override
   final int count;
 
-  factory _$Counter([void Function(CounterBuilder) updates]) =>
-      (new CounterBuilder()..update(updates)).build();
+  factory _$Counter([void Function(CounterBuilder) updates]) => (new CounterBuilder()..update(updates)).build();
 
   _$Counter._({this.count}) : super._() {
     BuiltValueNullFieldError.checkNotNull(count, 'Counter', 'count');
   }
 
   @override
-  Counter rebuild(void Function(CounterBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+  Counter rebuild(void Function(CounterBuilder) updates) => (toBuilder()..update(updates)).build();
 
   @override
   CounterBuilder toBuilder() => new CounterBuilder()..replace(this);
@@ -37,8 +35,7 @@ class _$Counter extends Counter {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Counter')..add('count', count))
-        .toString();
+    return (newBuiltValueToStringHelper('Counter')..add('count', count)).toString();
   }
 }
 
@@ -73,10 +70,7 @@ class CounterBuilder implements Builder<Counter, CounterBuilder> {
 
   @override
   _$Counter build() {
-    final _$result = _$v ??
-        new _$Counter._(
-            count: BuiltValueNullFieldError.checkNotNull(
-                count, 'Counter', 'count'));
+    final _$result = _$v ?? new _$Counter._(count: BuiltValueNullFieldError.checkNotNull(count, 'Counter', 'count'));
     replace(_$result);
     return _$result;
   }

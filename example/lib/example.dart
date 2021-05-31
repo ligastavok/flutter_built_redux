@@ -77,8 +77,7 @@ class CounterWidget extends StoreConnector<Counter, CounterActions, int> {
   int connect(Counter state) => state.count;
 
   @override
-  Widget build(BuildContext context, int count, CounterActions actions) =>
-      Scaffold(
+  Widget build(BuildContext context, int count, CounterActions actions) => Scaffold(
         body: Row(
           children: <Widget>[
             ElevatedButton(
@@ -93,9 +92,8 @@ class CounterWidget extends StoreConnector<Counter, CounterActions, int> {
 
 // Built redux counter state, actions, and reducer
 
-ReducerBuilder<Counter, CounterBuilder> reducerBuilder =
-    ReducerBuilder<Counter, CounterBuilder>()
-      ..add(CounterActionsNames.increment, (s, a, b) => b.count++);
+ReducerBuilder<Counter, CounterBuilder> reducerBuilder = ReducerBuilder<Counter, CounterBuilder>()
+  ..add(CounterActionsNames.increment, (s, a, b) => b.count++);
 
 abstract class CounterActions extends ReduxActions {
   factory CounterActions() => _$CounterActions();
